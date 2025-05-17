@@ -4,5 +4,5 @@ class Solution:
         for i, num in enumerate(nums):
             complement = target-num
             if complement in num_to_index:
-                return [num_to_index[complement], i]
+                return [i, num_to_index[complement]]
             num_to_index[num]=i
