@@ -18,6 +18,7 @@ class Solution:
             x.next = newNode
             hap = int((a+b+hap) / 10)
 
+            # 얘네들을 꼭 해야됨
             if l1:
                 l1 = l1.next
             if l2:
