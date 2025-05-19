@@ -2,7 +2,7 @@ class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows==1:
             return s
-        # 열 개수 판별 - 시간 소요 小
+        # 열 개수 판별 - 시간 소요 小 (401ms)
         cycle = 2*numRows-2
         colN = ((len(s) + cycle - 1) // cycle) * (numRows - 1)
         # 열 개수 판별 - 시간소요 多 (229ms)
