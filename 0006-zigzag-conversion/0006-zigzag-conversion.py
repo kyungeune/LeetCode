@@ -2,21 +2,21 @@ class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows==1:
             return s
-        # 열 개수 판별 - 시간 소요 小 (401ms)
-        cycle = 2*numRows-2
-        colN = ((len(s) + cycle - 1) // cycle) * (numRows - 1)
+        # 열 개수 판별 - 시간 소요 小 (667ms)
+        # cycle = 2*numRows-2
+        # colN = ((len(s) + cycle - 1) // cycle) * (numRows - 1)
         # 열 개수 판별 - 시간소요 多 (229ms)
-        # colN = 0 # 열 개수
-        # x = len(s)
-        # imsi = 1
-        # while x>=1:
-        #     if imsi == 1:
-        #         x-=numRows
-        #         imsi = numRows-1
-        #     else:
-        #         x-=1
-        #         imsi-=1
-        #     colN+=1
+        colN = 0 # 열 개수
+        x = len(s)
+        imsi = 1
+        while x>=1:
+            if imsi == 1:
+                x-=numRows
+                imsi = numRows-1
+            else:
+                x-=1
+                imsi-=1
+            colN+=1
 
         print(colN)
         arr=[['' for c in range(colN)] for d in range(numRows)]
