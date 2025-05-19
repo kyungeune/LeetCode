@@ -3,20 +3,20 @@ class Solution:
         if numRows==1:
             return s
         # 열 개수 판별 - 시간 소요 小
-        cycle = 2*numRows-2
-        colN = ceil(len(s) / cycle) * (numRows - 1)
+        # cycle = 2*numRows-2
+        # colN = ceil(len(s) / cycle) * (numRows - 1)
         # 열 개수 판별 - 시간소요 多
-        # colN = 0 # 열 개수
-        # x = len(s)
-        # imsi = 1
-        # while x>=1:
-        #     if imsi == 1:
-        #         x-=numRows
-        #         imsi = numRows-1
-        #     else:
-        #         x-=1
-        #         imsi-=1
-        #     colN+=1
+        colN = 0 # 열 개수
+        x = len(s)
+        imsi = 1
+        while x>=1:
+            if imsi == 1:
+                x-=numRows
+                imsi = numRows-1
+            else:
+                x-=1
+                imsi-=1
+            colN+=1
 
         print(colN)
         arr=[['' for c in range(colN)] for d in range(numRows)]
