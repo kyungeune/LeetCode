@@ -2,10 +2,10 @@ class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows==1:
             return s
-        # 열 개수 판별 - 시간 소요 小 (667ms)
+        # 열 개수 판별 - 시간 소요 多 (667ms)
         # cycle = 2*numRows-2
         # colN = ((len(s) + cycle - 1) // cycle) * (numRows - 1)
-        # 열 개수 판별 - 시간소요 多 (229ms)
+        # 열 개수 판별 - 시간소요 小 (242ms)
         colN = 0 # 열 개수
         x = len(s)
         imsi = 1
@@ -19,7 +19,7 @@ class Solution:
             colN+=1
 
         print(colN)
-        arr=[['' for c in range(colN)] for d in range(numRows)]
+        arr=[''] * numRows
 
         
         a = 0  # arr Index
@@ -28,14 +28,14 @@ class Solution:
             if imsi == 1:  # 세로로 쫙 넣어야 하는 경우
                 for i in range(numRows):
                     if a<len(s):
-                        arr[i][j] = s[a]
+                        arr[i] += s[a]
                         a+=1
                     else:
                         break
                 imsi = numRows-1
             else:  # 한 글자씩 들어가는 경우
                 if a<len(s):
-                    arr[imsi-1][j] = s[a]
+                    arr[imsi-1] += s[a]
                     a+=1
                 else:
                     break
@@ -43,7 +43,5 @@ class Solution:
         
         answer = ''
         for c in range(numRows):
-            for d in range(colN):
-                if arr[c][d]!='':
-                    answer+=arr[c][d]
+            answer+=arr[c]
         return answer
