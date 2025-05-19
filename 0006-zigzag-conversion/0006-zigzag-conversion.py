@@ -19,8 +19,8 @@ class Solution:
             colN+=1
 
         print(colN)
-        arr=[''] * numRows
-
+        arr=[''] * numRows  # 최적화 됨 --> 16ms
+        # 이전 : 2차원 배열에 집어넣음
         
         a = 0  # arr Index
         imsi = 1
