@@ -15,12 +15,11 @@ class Solution:
                 if cnt>maxN:  # maxN 갱신
                     maxN=cnt
             else:
-                # 슬라이싱을 활용한 겹친 글자 손절
+                # 슬라이싱을 활용한 겹친 글자 없애기
                 k = num.index(x)
                 num = num[k+1:]
                 num+=x
                 cnt=len(num)
             i+=1
-            print(num, cnt)
 
         return maxN
