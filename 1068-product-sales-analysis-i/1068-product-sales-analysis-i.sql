@@ -1,0 +1,3 @@
+SELECT PRODUCT_NAME, YEAR, PRICE
+FROM SALES S, PRODUCT P
+WHERE S.product_id = P.product_id;
