@@ -1,5 +1,7 @@
 SELECT DISTINCT author_id AS id
 FROM Views
 WHERE author_id = viewer_id
-ORDER BY id ASC;
--- ORDER BY author_id ASC;
+# 런타임 400 ms
+-- ORDER BY id ASC;
+# 런타임 
+ORDER BY author_id ASC;
