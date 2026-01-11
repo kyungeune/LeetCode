@@ -18,7 +18,7 @@ class Solution:
             rslt += x % 10
 
             # 제출 가능 범위 필터링
-            if rslt > 2**31 - 1:
+            if rslt < -2**31 or rslt > 2**31 - 1:
                 return 0
 
             x //= 10
