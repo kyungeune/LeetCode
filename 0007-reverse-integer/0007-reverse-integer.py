@@ -16,14 +16,17 @@ class Solution:
         while x != 0:
             rslt *= 10
             rslt += x % 10
+
+            # 제출 가능 범위 필터링
+            if rslt < -2**31 or rslt > 2**31 - 1:
+                return 0
+
             x //= 10
 
         # 원래 음수였던 값은 양수로 변환
         if minus == 1:
             rslt = -rslt
 
-        # 제출 가능 범위 필터링
-        if rslt < -2**31 or rslt > 2**31 - 1:
-            return 0
+        
         
         return rslt
