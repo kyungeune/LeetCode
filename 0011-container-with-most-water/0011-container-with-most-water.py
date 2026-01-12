@@ -1,13 +1,18 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        maxW = -1
-        i = 0
-        j = len(height)-1
+        # 넓이
+        maxW = -1  
+        # 왼쪽부터 이동하는 pointer
+        i = 0  
+        # 오른쪽부터 이동하는 pointer
+        j = len(height)-1  
 
         while i < j:
+            # 만약 현재 넓이가 최대 넓이라면
             if min(height[i], height[j]) * (j - i) > maxW:
                 maxW = min(height[i], height[j]) * (j - i)
 
+            # i와 j 중 height가 더 작은 것을 이동시킴, 단 둘의 길이가 동일할 경우에는 둘 다 이동시킴
             if height[i] > height[j]:
                     j -= 1
             elif height[i] < height[j]:
