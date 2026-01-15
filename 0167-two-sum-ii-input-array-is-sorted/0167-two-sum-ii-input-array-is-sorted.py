@@ -1,18 +1,19 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         lst = []
-        l=0
-        r=len(numbers)-1
+        l = 0  # 왼쪽 인덱스
+        r = len(numbers) - 1  # 오른쪽 인덱스
 
-        while l < r:
-            total = numbers[l] + numbers[r]
+        total = numbers[l] + numbers[r]
+
+        while l != r:
             if total == target:
-                lst.append(l + 1)
-                lst.append(r + 1)
-                return lst
+                return [l+1, r+1]
             elif total < target:
                 l += 1
             else:
                 r -= 1
+
+            total = numbers[l] + numbers[r]
         
-        return lst
+        return [l+1, r+1]
