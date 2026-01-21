@@ -22,5 +22,15 @@ class Solution:
             for i in phone[digits[index]]:
                 backtrack(index + 1, path + i)
 
+            # 아래처럼 낱개로 진행됨
+            # ch = "a" → backtrack(1, "a")
+            # ch = "b" → backtrack(1, "b")
+            # ch = "c" → backtrack(1, "c")
+            
+            # ch = "d" → backtrack(2, "ad")
+            # ch = "e" → backtrack(2, "ae")
+            # ch = "f" → backtrack(2, "af")
+
+
         backtrack(0, "")
         return rslt
