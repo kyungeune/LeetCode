@@ -1,0 +1,12 @@
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+    # 변수 선언
+    DECLARE ANUMBER INT;
+    SET ANUMBER = N - 1;
+  RETURN (  # SELECT 값이 없다면, 자동으로 NULL 처리
+        SELECT DISTINCT(SALARY)
+        FROM EMPLOYEE
+        ORDER BY SALARY DESC
+        LIMIT 1 OFFSET ANUMBER
+  );
+END
