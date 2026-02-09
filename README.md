@@ -93,6 +93,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1179-reformat-department-table](https://github.com/kyungeune/LeetCode/tree/master/1179-reformat-department-table) |
 | [1204-last-person-to-fit-in-the-bus](https://github.com/kyungeune/LeetCode/tree/master/1204-last-person-to-fit-in-the-bus) |
 | [1211-queries-quality-and-percentage](https://github.com/kyungeune/LeetCode/tree/master/1211-queries-quality-and-percentage) |
+| [1341-movie-rating](https://github.com/kyungeune/LeetCode/tree/master/1341-movie-rating) |
 ## Two Pointers
 |  |
 | ------- |
