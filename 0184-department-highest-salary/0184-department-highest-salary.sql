@@ -6,12 +6,3 @@ WHERE E.SALARY = (
     FROM EMPLOYEE E2
     WHERE E2.DEPARTMENTID = E.DEPARTMENTID  # 외부 Employee랑 비교
 )
-
-
--- SELECT D.NAME AS Department, E.NAME AS Employee, SALARY AS Salary 
--- FROM EMPLOYEE E, DEPARTMENT D
--- WHERE E.departmentId = D.ID AND E.SALARY = (
---     SELECT MAX(E2.Salary)
---     FROM EMPLOYEE E2
---     WHERE E2.DepartmentId = E.DepartmentId
--- );
